@@ -1,30 +1,25 @@
 [gd_scene load_steps=8 format=3 uid="uid://drhdoldkc3oft"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_13khn"]
-[ext_resource type="Texture2D" uid="uid://kjd1v5h4s3au" path="res://art/playerGrey_up1.png" id="1_is2wu"]
-[ext_resource type="Texture2D" uid="uid://db6xgk5gtlhgl" path="res://art/playerGrey_up2.png" id="2_jeuob"]
-[ext_resource type="Texture2D" uid="uid://dlfib0s7lr1l4" path="res://art/playerGrey_walk1.png" id="3_xmmer"]
-[ext_resource type="Texture2D" uid="uid://cdpd5xulsrt6f" path="res://art/playerGrey_walk2.png" id="4_tkqbd"]
+[ext_resource type="Texture2D" uid="uid://cmn51y35n6qdr" path="res://art/ptera/pixil-frame-0.png" id="2_fybl0"]
+[ext_resource type="Texture2D" uid="uid://ddtmfida1d7w8" path="res://art/ptera/pixil-frame-1.png" id="3_5t7lg"]
+[ext_resource type="Texture2D" uid="uid://bch37102ct1jf" path="res://art/ptera/pixil-frame-2.png" id="4_dmbee"]
+[ext_resource type="Texture2D" uid="uid://b0as5mv8rwjdl" path="res://art/ptera/pixil-frame-3.png" id="5_ytgai"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oel4q"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_is2wu")
+"texture": ExtResource("2_fybl0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_jeuob")
-}],
-"loop": true,
-"name": &"up",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_xmmer")
+"texture": ExtResource("3_5t7lg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_tkqbd")
+"texture": ExtResource("4_dmbee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ytgai")
 }],
 "loop": true,
 "name": &"walk",
@@ -39,12 +34,14 @@ script = ExtResource("1_13khn")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_oel4q")
 animation = &"walk"
+frame_progress = 0.452547
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -7)
+position = Vector2(7, 11)
+scale = Vector2(0.4, 0.4)
 shape = SubResource("CircleShape2D_1nl1x")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

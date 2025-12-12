@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://blwmqxrm82s3b"]
+
+[ext_resource type="Script" path="res://mob.gd" id="1_t37ta"]
+[ext_resource type="Texture2D" uid="uid://d3oqf2kov0bc8" path="res://art/mosa/mosasaure-sheet.png" id="2_vimcd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjnij"]
+atlas = ExtResource("2_vimcd")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0c070"]
+atlas = ExtResource("2_vimcd")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e0dit"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjnij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0c070")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kr60m"]
+radius = 6.9979
+height = 81.2595
+
+[node name="mosa" type="RigidBody2D" groups=["mobs"]]
+position = Vector2(-3, -3)
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_t37ta")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(7, -0.999999)
+rotation = 0.0460606
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_e0dit")
+animation = &"fly"
+flip_h = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(38, 6)
+rotation = 1.5708
+scale = Vector2(2, 1.969)
+shape = SubResource("CapsuleShape2D_kr60m")

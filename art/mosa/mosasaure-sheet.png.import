@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kjd1v5h4s3au"
-path="res://.godot/imported/playerGrey_up1.png-6bd114d0a6beac91f48e3a7314d44564.ctex"
+uid="uid://d3oqf2kov0bc8"
+path="res://.godot/imported/mosasaure-sheet.png-6e6f922c55173755d986cbb7f3dd87bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/playerGrey_up1.png"
-dest_files=["res://.godot/imported/playerGrey_up1.png-6bd114d0a6beac91f48e3a7314d44564.ctex"]
+source_file="res://art/mosa/mosasaure-sheet.png"
+dest_files=["res://.godot/imported/mosasaure-sheet.png-6e6f922c55173755d986cbb7f3dd87bb.ctex"]
 
 [params]
 

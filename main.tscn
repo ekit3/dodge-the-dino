@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://bffj70kpfv0kx"]
+[gd_scene load_steps=10 format=4 uid="uid://bffj70kpfv0kx"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_ut1rg"]
 [ext_resource type="PackedScene" uid="uid://v527ax5v5p1o" path="res://mob.tscn" id="2_w3hgu"]
 [ext_resource type="PackedScene" uid="uid://drhdoldkc3oft" path="res://player.tscn" id="3_28v1o"]
+[ext_resource type="PackedScene" uid="uid://blwmqxrm82s3b" path="res://mosa.tscn" id="3_55raj"]
 [ext_resource type="PackedScene" uid="uid://kp073gfbgx76" path="res://hud.tscn" id="4_ql5bi"]
 [ext_resource type="AudioStream" uid="uid://br5txn5iedcqj" path="res://art/gameover.wav" id="5_0cyjn"]
 
@@ -23,6 +24,7 @@ packet_sequence = SubResource("OggPacketSequence_hrttv")
 [node name="Main" type="Node"]
 script = ExtResource("1_ut1rg")
 mob_scene = ExtResource("2_w3hgu")
+mosa_scene = ExtResource("3_55raj")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -30,7 +32,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.841972, 0.345027, 0.502356, 1)
+color = Color(0.260193, 0.585735, 0.71351, 1)
 
 [node name="Player" parent="." instance=ExtResource("3_28v1o")]
 

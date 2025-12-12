@@ -1,6 +1,7 @@
 extends Node
 
 @export var mob_scene: PackedScene
+@export var mosa_scene: PackedScene
 var score
 # Called when the node enters the scene tree for the first time.
 
@@ -34,7 +35,9 @@ func _on_score_timer_timeout() -> void:
 
 func _on_mob_timer_timeout() -> void:
 	# new mob
-	var mob = mob_scene.instantiate()
+	var mob_array = [mob_scene, mosa_scene]
+	var rnd_scene = mob_array.pick_random() 
+	var mob = rnd_scene.instantiate()
 	
 	# Choose a random location on Path2d
 	var mob_spawn_location = $MobPath/MobSpawnLocation
