@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://v527ax5v5p1o"]
+
+[ext_resource type="Script" path="res://mob.gd" id="1_v07ew"]
+[ext_resource type="Texture2D" uid="uid://dl00njjgh00p7" path="res://art/enemyFlyingAlt_1.png" id="2_28vyy"]
+[ext_resource type="Texture2D" uid="uid://c2n7gwpetq36v" path="res://art/enemyFlyingAlt_2.png" id="3_no70n"]
+[ext_resource type="Texture2D" uid="uid://bl22gayj6eil1" path="res://art/enemySwimming_1.png" id="4_y2bpn"]
+[ext_resource type="Texture2D" uid="uid://cunbicxun2c5b" path="res://art/enemySwimming_2.png" id="5_mh670"]
+[ext_resource type="Texture2D" uid="uid://cjaxvlb653fw3" path="res://art/enemyWalking_1.png" id="6_5itpy"]
+[ext_resource type="Texture2D" uid="uid://bwaxpkcqnmkvl" path="res://art/enemyWalking_2.png" id="7_f2xbr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e0dit"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_28vyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_no70n")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_y2bpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mh670")
+}],
+"loop": true,
+"name": &"swim",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_5itpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f2xbr")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w10i4"]
+radius = 32.0
+
+[node name="Mob" type="RigidBody2D" groups=["mobs"]]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_v07ew")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_e0dit")
+animation = &"fly"
+frame_progress = 0.877919
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 0)
+shape = SubResource("CircleShape2D_w10i4")
