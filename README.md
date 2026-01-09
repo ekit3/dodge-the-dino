@@ -1,6 +1,6 @@
-# Dodge the creeps
+# Dodge the DINOS
 ## Table of content 
-- [Dodge the creeps](#dodge-the-creeps)
+- [Dodge the DINOS](#dodge-the-dinos)
   - [Table of content](#table-of-content)
   - [Description](#description)
   - [Launch](#launch)
