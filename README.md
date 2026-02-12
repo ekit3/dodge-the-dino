@@ -9,6 +9,7 @@
 ## Description
 The repository contain a simple 2D game made with Godot engine.  
 Try to survive as long as possible whiele dodging randomly appearing dinos !  
+This game was created during the [DINO JAM 5 event](https://itch.io/jam/dinojam5)
 
 ## Launch
 To launch the game, open the project in Godot engine and run the main scene.
